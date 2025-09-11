@@ -1,12 +1,13 @@
-class Pelicula extends IProducto{
-    constructor(duracion, tipo, titulo){
+export class Pelicula extends IProducto{
+    constructor(titulo, tipo, duracion, disponible){
         super();
-        this.duracion = duracion;
+        this.titulo = titulo;
         this.tipo = tipo;
         this.duracion = duracion;
+        this.disponible = disponible;
     }
 
     estaDisponible(){
-        console.log("Pelicula disponible")
+        return this.disponible;
     }
 }

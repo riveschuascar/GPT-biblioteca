@@ -1,4 +1,4 @@
-class IProducto{
+export class IProducto{
     estaDisponible(){
         console.log("Proucto, por implementar")
     }
