@@ -1,3 +1,5 @@
+import { IProducto } from '../InterfacesIProducto.js';
+
 export class Pelicula extends IProducto{
     constructor(titulo, tipo, duracion, disponible){
         super();
