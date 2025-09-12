@@ -1,10 +1,13 @@
 export class IProducto {
-  constructor(nombre, precio) {
-    this.nombre = nombre;
-    this.precio = precio;
+  reservar() {
+    throw new Error("Metodo reservar() no implementado");
+  }
+
+  estaDisponible() {
+    throw new Error("Metodo estaDisponible() no implementado");
   }
 
   mostrarProducto() {
-    console.log(`${this.nombre} - Precio: $${this.precio}`);
+    throw new Error("Metodo mostrarProducto() no implementado");
   }
 }

@@ -1,8 +1,7 @@
-import { IProducto } from '../InterfacesIProducto.js';
+import { IProducto } from './IProducto.js';
 
 export class Libro extends IProducto {
-  constructor(nombre, precio, autor, paginas) {
-    super(nombre, precio); // Llama al constructor de IProducto
+  constructor(autor, paginas) {
     this.autor = autor;
     this.paginas = paginas;
     this.reservado = false;

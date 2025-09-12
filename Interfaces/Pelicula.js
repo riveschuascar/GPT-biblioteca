@@ -1,8 +1,7 @@
-import { IProducto } from '../InterfacesIProducto.js';
+import IProducto from './IProducto.js';
 
 export class Pelicula extends IProducto{
     constructor(titulo, tipo, duracion, disponible){
-        super();
         this.titulo = titulo;
         this.tipo = tipo;
         this.duracion = duracion;

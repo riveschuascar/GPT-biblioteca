@@ -1,8 +1,7 @@
-import { IProducto } from '../InterfacesIProducto.js';
+import { IProducto } from './IProducto.js';
 
-export class Libro extends IProducto {
-  constructor(marca, procesador, ram) {
-    super(marca, marca); // Llama al constructor de IProducto
+export class Laptop extends IProducto {
+  constructor(procesador, ram) {
     this.procesador = procesador;
     this.ram = ram;
     this.reservado = false;

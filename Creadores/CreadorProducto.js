@@ -1,5 +1,5 @@
 export class CreadorProducto{
     crearProducto(){
-        console.log("Producto creado")//Ni idea
+        throw new Error("CreadorProducto es una interfaz abstracta, no se puede instanciar directamente");
     }
 }
