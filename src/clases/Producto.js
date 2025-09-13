@@ -1,4 +1,4 @@
-import IProducto from "./IProducto.js";
+import IProducto from "./Producto.interfaz.js";
 
 class Producto extends IProducto {
   constructor(tipo, nombre) {
