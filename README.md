@@ -3,4 +3,4 @@ Pasos para el uso:
 * instalar dependencias
 ``` npm install ```
 * ejecutar backend
-``` node servidor.js ```
+``` node src/server.js ``` o ``` npm start ```
