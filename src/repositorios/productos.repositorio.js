@@ -12,7 +12,7 @@ class ProductoRepositorio {
       case "laptop":
         return laptopModelo;
       default:
-        throw new Error("No es un tipo valido")
+        throw new Error(`${tipo}: no es un tipo valido`)
     }
   }
 
@@ -22,16 +22,16 @@ class ProductoRepositorio {
   }
 
   insertar(data) {
-    const modeloDocumento = this.obtenerModelo(tipo);
+    const modeloDocumento = this.obtenerModelo(data.tipo);
     return modeloDocumento.insertOne(data);
   }
 
   actualizar(id, data) {
-    const modeloDocumento = this.obtenerModelo(tipo);
+    const modeloDocumento = this.obtenerModelo(data.tipo);
     return modeloDocumento.findByIdAndUpdate(id, data);
   }
 
-  eliminar(id) {
+  eliminar(id, tipo) {
     const modeloDocumento = this.obtenerModelo(tipo);
     return modeloDocumento.findByIdAndDelete(id);
   }

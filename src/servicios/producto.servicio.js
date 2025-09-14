@@ -9,13 +9,13 @@ class ProductoServicio {
   instanciarProducto(data) {
     switch (data.tipo) {
       case "libro":
-        return LibroFabrica.crearProducto(data);
+        return LibroFabrica.crearProducto(data.titulo, data.autor, data.isb, data.paginas);
       case "pelicula":
-        return PeliculaFabrica.crearProducto(data);
+        return PeliculaFabrica.crearProducto(data.titulo, data.director, data.duracion);
       case "laptop":
-        return LaptopFabrica.crearProducto(data);
+        return LaptopFabrica.crearProducto(data.modelo, data.cpu, data.ram);
       default:
-        throw new Error("No es un tipo valido");
+        throw new Error(`${data.tipo}: no es un tipo valido`)
     }
   }
 
@@ -26,6 +26,7 @@ class ProductoServicio {
 
   insertar(data) {
     const producto = this.instanciarProducto(data);
+    console.log(producto);
     return this.repositorio.insertar(producto);
   }
 

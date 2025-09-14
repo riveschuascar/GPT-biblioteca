@@ -1,35 +1,10 @@
 import IProducto from "./Producto.interfaz.js";
 
 class Producto extends IProducto {
-  constructor(tipo, nombre) {
+  constructor(tipo) {
     super();
-    this._tipo = tipo;
-    this._nombre = nombre;
-    this._estaDisponible = true;
-  }
-
-  set tipo(value) {
-    this._tipo = value;
-  }
-
-  get tipo() {
-    return this._tipo;
-  }
-
-  set nombre(value) {
-    this._nombre = value;
-  }
-
-  get nombre() {
-    return this._nombre;
-  }
-
-  set estaDisponible(value) {
-    this._estaDisponible = value;
-  }
-
-  get estaDisponible() {
-    return this._estaDisponible;
+    this.tipo = tipo;
+    this.estaDisponible = true;
   }
 }
 

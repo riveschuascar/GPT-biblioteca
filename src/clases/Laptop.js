@@ -2,29 +2,16 @@ import Producto from "./Producto.js";
 
 class Laptop extends Producto {
   constructor(modelo, cpu, ram) {
-    super("laptop", modelo);
-    this._cpu = cpu;
-    this._ram = ram;
+    super("laptop");
+    this.modelo = modelo;
+    this.cpu = cpu;
+    this.ram = ram;
   }
 
-  set cpu(value) {
-    this._cpu = value;
-  }
-
-  get cpu() {
-    return this._cpu;
-  }
-
-  set ram(value) {
-    this._ram = value;
-  }
-
-  get ram() {
-    return this._ram;
-  }
+  // TODO implmentar crearDesdeJSON(json) * constructor que recibe un solo json como parametro *
 
   mostrarProducto() {
-    console.log(`Modelo: ${this.nombre} - CPU: ${this.cpu} - RAM: ${this.ram}`);
+    console.log(`Modelo: ${this.modelo} - CPU: ${this.cpu} - RAM: ${this.ram}`);
   }
 }
 

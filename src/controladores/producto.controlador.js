@@ -17,6 +17,7 @@ class ProductoControlador {
   async insertar(req, res) {
     try {
       const data = req.body;
+      console.log(data);
       const producto = await this.servicio.insertar(data);
       res.status(201).json(producto);
     } catch (error) {

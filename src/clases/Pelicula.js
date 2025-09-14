@@ -2,29 +2,16 @@ import Producto from "./Producto.js";
 
 class Pelicula extends Producto {
   constructor(titulo, director, duracion) {
-    super("pelicula", titulo);
-    this._director = director;
-    this._duracion = duracion;
+    super("pelicula");
+    this.titulo = titulo;
+    this.director = director;
+    this.duracion = duracion;
   }
 
-  set director(value) {
-    this._director = value;
-  }
-
-  get director() {
-    return this._director;
-  }
-
-  set duracion(value) {
-    this._duracion = value;
-  }
-
-  get duracion() {
-    return this._duracion;
-  }
+  // TODO implmentar crearDesdeJSON(json) * constructor que recibe un solo json como parametro *
 
   mostrarProducto() {
-    console.log(`Titulo: ${this.nombre} - Director: ${this.director} - Duracion: ${this.duracion}`);
+    console.log(`Titulo: ${this.titulo} - Director: ${this.director} - Duracion: ${this.duracion}`);
   }
 }
 
