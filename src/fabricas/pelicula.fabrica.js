@@ -7,4 +7,4 @@ class PeliculaFabrica extends ProductoFabrica {
   }
 }
 
-export default PeliculaFabrica;
+export default new PeliculaFabrica();

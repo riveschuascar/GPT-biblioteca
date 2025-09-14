@@ -7,4 +7,4 @@ class LaptopFabrica extends ProductoFabrica {
   }
 }
 
-export default LaptopFabrica;
+export default new LaptopFabrica();
