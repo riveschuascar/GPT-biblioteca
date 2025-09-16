@@ -19,14 +19,12 @@ class ProductoServicio {
     }
   }
 
-  buscarPorId(id, data) {
-    const producto = this.instanciarProducto(data);
-    return this.repositorio.buscarPorId(id, producto);
-  }
+  buscarPorId(id, tipo) {
+  return this.repositorio.buscarPorId(id, tipo);
+}
 
   insertar(data) {
     const producto = this.instanciarProducto(data);
-    console.log(producto);
     return this.repositorio.insertar(producto);
   }
 
@@ -35,8 +33,8 @@ class ProductoServicio {
     return this.repositorio.actualizar(id, producto);
   }
 
-  eliminar(id) {
-    return this.repositorio.eliminar(id);
+  eliminar(id, tipo) {
+    return this.repositorio.eliminar(id, tipo);
   }
 }
 

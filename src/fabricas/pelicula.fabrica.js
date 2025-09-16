@@ -1,5 +1,5 @@
 import ProductoFabrica from "./iproducto.fabrica.js";
-import Pelicula from "../clases/pelicula.js";
+import Pelicula from "../clases/Pelicula.js";
 
 class PeliculaFabrica extends ProductoFabrica {
   crearProducto(titulo, director, duracion) {
