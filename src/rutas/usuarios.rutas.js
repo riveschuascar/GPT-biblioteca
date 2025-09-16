@@ -8,7 +8,7 @@ routerUsuarios.get("/", (req, res) => controlador.listar(req, res));
 
 routerUsuarios.get("/:id", (req, res) => controlador.buscarPorId(req, res));
 
-routerUsuarios.get("/:email", (req, res) => controlador.buscarPorId(req, res));
+routerUsuarios.get("/email/:email", (req, res) => controlador.buscarPorEmail(req, res));
 
 routerUsuarios.post("/", (req, res) => controlador.insertar(req, res));
 
